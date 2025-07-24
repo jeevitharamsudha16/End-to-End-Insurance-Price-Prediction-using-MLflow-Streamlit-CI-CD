@@ -8,7 +8,7 @@ import os
 model = joblib.load("models/best_model.pkl")
 
 # 🎯 Load the scaler from the models/scalers folder
-scaler = joblib.load("models/scalers/minmax_scaler.pkl")
+scaler = joblib.load("scalers/minmax_scaler.pkl")
 
 # 🌟 Streamlit UI
 st.set_page_config(page_title="Insurance Charges Predictor", page_icon="💰")
