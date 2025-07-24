@@ -81,8 +81,7 @@ Medical insurance costs vary significantly depending on personal factors like ag
 | Random Forest       | 0.80          |
 | Gradient Boosting ✅| **0.84**      |
 | XGBoost             | 0.82          |
-| SVM                 | -0.01         |
-| KNN                 | 0.67          |
+
 
 > ✅ Best model selected: **Gradient Boosting Regressor**
 
