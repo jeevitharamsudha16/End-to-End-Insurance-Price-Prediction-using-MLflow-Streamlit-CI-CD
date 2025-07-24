@@ -1,0 +1,46 @@
+# Python
+*.pyc
+*.pyo
+__pycache__/
+*.ipynb_checkpoints/
+
+# Virtual environments
+.env/
+env/
+venv/
+ENV/
+*.env
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# VS Code settings
+.vscode/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Model files
+models/
+scalers/
+*.pkl
+*.joblib
+*.h5
+
+# MLflow artifacts
+mlruns/
+mlartifacts/
+
+# Streamlit cache
+.streamlit/
+
+# CSV/Excel outputs (optional)
+*.csv
+*.xlsx
+
+# GitHub Actions secrets
+.github/secrets/
