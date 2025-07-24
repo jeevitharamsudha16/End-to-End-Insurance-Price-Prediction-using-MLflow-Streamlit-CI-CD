@@ -1,16 +1,28 @@
 stages:
   preprocess:
-    cmd: python src/preprocess.py
+    cmd: python data_preprocessing.py
     deps:
-      - data/raw/data.csv
-      - src/preprocess.py
+      - data_loader.py
+      - data/raw/data.csv  # Update path if different
+      - data_preprocessing.py
     outs:
-      - data/processed/features.csv
+      - data/processed/features.csv  # Make sure this path is correct
+      - scalers/minmax_scaler.pkl    # If you're saving scalers
 
   train:
-    cmd: python src/train.py
+    cmd: python model_training.py
     deps:
       - data/processed/features.csv
-      - src/train.py
+      - model_training.py
     outs:
       - models/best_model.pkl
+      - models/all_models/  # Optional: if you save multiple models
+
+  evaluate:
+    cmd: python model_evaluation.py
+    deps:
+      - models/best_model.pkl
+      - model_evaluation.py
+    outs:
+      - reports/metrics.json  # Optional: if you log scores
+
