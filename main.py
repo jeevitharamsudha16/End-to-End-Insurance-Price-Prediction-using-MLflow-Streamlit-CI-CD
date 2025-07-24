@@ -3,7 +3,7 @@ from data_preprocessing import preprocess_data
 from model_training import train_and_save_models
 from model_evaluation import evaluate_models_without_mlflow  # updated
 
-def main():
+def main(): 
     print("📥 Loading dataset...")
     df = load_data()
 
