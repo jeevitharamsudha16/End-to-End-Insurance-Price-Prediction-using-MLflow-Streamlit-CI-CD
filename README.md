@@ -43,7 +43,7 @@ Medical insurance costs vary significantly depending on personal factors like ag
 | UI Framework     | Streamlit                                              |
 | Model Tracking   | MLflow (removed in final deployment version)           |
 | Automation       | GitHub Actions                                         |
-| Version Control  | Git & GitHub                                           |
+
 
 
 ## 🧠 Machine Learning Pipeline
