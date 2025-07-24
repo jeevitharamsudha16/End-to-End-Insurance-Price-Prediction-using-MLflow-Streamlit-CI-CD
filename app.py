@@ -1,15 +1,13 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import mlflow
-import mlflow.sklearn
 import joblib
+import os
 
-# 🎯 Load the Gradient Boosting model from MLflow Registry
-model_uri = "models:/insurance_model_gradient_boosting@champion"
-model = mlflow.sklearn.load_model(model_uri)
+# 🎯 Load the best model from models directory
+model = joblib.load("models/best_model.pkl")
 
-# 🎯 Load the scaler from the correct folder
+# 🎯 Load the scaler from the models/scalers folder
 scaler = joblib.load("models/scalers/minmax_scaler.pkl")
 
 # 🌟 Streamlit UI
@@ -21,7 +19,6 @@ age = st.slider("Age", 18, 100, 30)
 sex = st.selectbox("Sex", ["male", "female"])
 bmi = st.number_input("BMI", 10.0, 50.0, 25.0)
 children = st.number_input("Number of Children", min_value=0, max_value=10, value=0)
-
 smoker = st.selectbox("Smoker", ["yes", "no"])
 region = st.selectbox("Region", ['southwest', 'northwest', 'northeast', 'southeast'])
 
