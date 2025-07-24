@@ -2,6 +2,10 @@
 
 This project is an end-to-end Machine Learning solution designed to **predict medical insurance charges** based on user input. It combines robust model training pipelines, automated evaluation, and modern frontend deployment using **Streamlit**. Additionally, it integrates **CI/CD pipelines via GitHub Actions** to ensure smooth deployment and updates.
 
+## 🚀 Live Demo
+
+🌐 [View App on Streamlit Cloud](https://insurance-price-prediction-using-app-and-ci-cd-dmdu9cb7zr5jug5.streamlit.app/)
+
 
 ## 🎯 Problem Statement
 
