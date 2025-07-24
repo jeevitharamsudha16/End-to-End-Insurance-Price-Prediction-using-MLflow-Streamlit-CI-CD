@@ -1,4 +1,4 @@
-# 🧾 Project Report: Insurance Price Prediction using Streamlit & CI/CD
+#  Insurance Price Prediction using Streamlit & CI/CD
 
 This project is an end-to-end Machine Learning solution designed to **predict medical insurance charges** based on user input. It combines robust model training pipelines, automated evaluation, and modern frontend deployment using **Streamlit**. Additionally, it integrates **CI/CD pipelines via GitHub Actions** to ensure smooth deployment and updates.
 
