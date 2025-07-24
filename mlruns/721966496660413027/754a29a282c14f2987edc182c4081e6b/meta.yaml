@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/jeevithads/Desktop/Insurance_price_prediction/mlruns/721966496660413027/754a29a282c14f2987edc182c4081e6b/artifacts
+end_time: 1753345370717
+entry_point_name: ''
+experiment_id: '721966496660413027'
+lifecycle_stage: active
+run_id: 754a29a282c14f2987edc182c4081e6b
+run_name: gregarious-mink-274
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753345366600
+status: 3
+tags: []
+user_id: jeevithads

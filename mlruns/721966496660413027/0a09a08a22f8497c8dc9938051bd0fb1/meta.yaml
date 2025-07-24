@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/jeevithads/Desktop/Insurance_price_prediction/mlruns/721966496660413027/0a09a08a22f8497c8dc9938051bd0fb1/artifacts
+end_time: 1753345345800
+entry_point_name: ''
+experiment_id: '721966496660413027'
+lifecycle_stage: active
+run_id: 0a09a08a22f8497c8dc9938051bd0fb1
+run_name: nimble-wasp-342
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753345339961
+status: 3
+tags: []
+user_id: jeevithads

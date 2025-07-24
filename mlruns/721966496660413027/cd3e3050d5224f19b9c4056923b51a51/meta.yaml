@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/jeevithads/Desktop/Insurance_price_prediction/mlruns/721966496660413027/cd3e3050d5224f19b9c4056923b51a51/artifacts
+end_time: 1753345626700
+entry_point_name: ''
+experiment_id: '721966496660413027'
+lifecycle_stage: active
+run_id: cd3e3050d5224f19b9c4056923b51a51
+run_name: enthused-rat-884
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753345622658
+status: 3
+tags: []
+user_id: jeevithads

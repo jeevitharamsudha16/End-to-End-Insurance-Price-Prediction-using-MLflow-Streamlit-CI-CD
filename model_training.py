@@ -1,35 +1,29 @@
 import os
 import joblib
-import mlflow
-import mlflow.sklearn
+import numpy as np
+import warnings
 from sklearn.linear_model import LinearRegression, Ridge
 from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.svm import SVR
 from sklearn.neighbors import KNeighborsRegressor
 from xgboost import XGBRegressor
-from sklearn.model_selection import GridSearchCV
-import warnings
-warnings.filterwarnings("ignore", message=".*Inferred schema contains integer column.*")
+from sklearn.model_selection import GridSearchCV, cross_val_score
 
+warnings.filterwarnings("ignore", message=".*Inferred schema contains integer column.*")
 
 def train_and_save_models(X_train, y_train, model_dir="models"):
     """
-    Trains multiple models, performs hyperparameter tuning if applicable,
-    logs everything to MLflow, and saves the trained models as .pkl files.
+    Trains multiple models with optional hyperparameter tuning,
+    evaluates using cross-validation, saves all models as .pkl,
+    and saves the best model as best_model.pkl.
 
     Args:
-    - X_train: Training features
-    - y_train: Training target
-    - model_dir: Folder to save trained models
+        X_train: Features for training
+        y_train: Target for training
+        model_dir: Directory to save .pkl files
     """
     os.makedirs(model_dir, exist_ok=True)
-
-    # Optional: Set MLflow URI if running remotely
-    # mlflow.set_tracking_uri("http://localhost:5000")
-
-    mlflow.set_experiment("insurance_model_training")
-    mlflow.sklearn.autolog()
 
     models = {
         "linear_regression": LinearRegression(),
@@ -39,7 +33,7 @@ def train_and_save_models(X_train, y_train, model_dir="models"):
         "decision_tree": DecisionTreeRegressor(),
         "svm": SVR(),
         "knn": KNeighborsRegressor(),
-        "xgboost": XGBRegressor()
+        "xgboost": XGBRegressor(verbosity=0)
     }
 
     param_grids = {
@@ -52,24 +46,41 @@ def train_and_save_models(X_train, y_train, model_dir="models"):
         "xgboost": {"n_estimators": [50, 100], "learning_rate": [0.05, 0.1]}
     }
 
+    best_model = None
+    best_model_name = None
+    best_score = -np.inf
+
     for name, model in models.items():
-        with mlflow.start_run(run_name=f"{name}_training"):
-            print(f"🚀 Training: {name}")
+        print(f"🚀 Training: {name}")
 
-            # Perform GridSearchCV if hyperparameters defined
-            if name in param_grids:
-                grid = GridSearchCV(model, param_grids[name], cv=3, scoring="r2", n_jobs=-1)
-                grid.fit(X_train, y_train)
-                best_model = grid.best_estimator_
-            else:
-                model.fit(X_train, y_train)
-                best_model = model
+        # Hyperparameter tuning if grid is defined
+        if name in param_grids:
+            grid = GridSearchCV(model, param_grids[name], cv=3, scoring="r2", n_jobs=-1)
+            grid.fit(X_train, y_train)
+            best_estimator = grid.best_estimator_
+        else:
+            model.fit(X_train, y_train)
+            best_estimator = model
 
-            # Save the best model
-            model_path = os.path.join(model_dir, f"{name}.pkl")
-            joblib.dump(best_model, model_path)
+        # Evaluate with cross-validation
+        scores = cross_val_score(best_estimator, X_train, y_train, cv=3, scoring="r2")
+        avg_score = np.mean(scores)
+        print(f"📊 {name} - R² CV Score: {avg_score:.4f}")
 
-            # Log model file as artifact to MLflow
-            mlflow.log_artifact(model_path)
+        # Save model
+        model_path = os.path.join(model_dir, f"{name}.pkl")
+        joblib.dump(best_estimator, model_path)
+        print(f"✅ Saved: {model_path}")
 
-            print(f"✅ Trained and saved: {name} → {model_path}")
+        # Track best model
+        if avg_score > best_score:
+            best_score = avg_score
+            best_model = best_estimator
+            best_model_name = name
+
+    # Save best model separately
+    if best_model:
+        best_model_path = os.path.join(model_dir, "best_model.pkl")
+        joblib.dump(best_model, best_model_path)
+        print(f"\n🏆 Best Model: {best_model_name} | R² = {best_score:.4f}")
+        print(f"📦 Saved best model as → {best_model_path}")

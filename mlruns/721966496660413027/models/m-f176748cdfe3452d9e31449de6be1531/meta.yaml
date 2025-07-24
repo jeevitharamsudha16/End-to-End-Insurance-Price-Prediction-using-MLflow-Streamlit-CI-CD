@@ -1,0 +1,10 @@
+artifact_location: file:///Users/jeevithads/Desktop/Insurance_price_prediction/mlruns/721966496660413027/models/m-f176748cdfe3452d9e31449de6be1531/artifacts
+creation_timestamp: 1753345594343
+experiment_id: '721966496660413027'
+last_updated_timestamp: 1753345596342
+model_id: m-f176748cdfe3452d9e31449de6be1531
+model_type: null
+name: model
+source_run_id: e752b344d759482b8d2936bb1c23594a
+status: 2
+status_message: null

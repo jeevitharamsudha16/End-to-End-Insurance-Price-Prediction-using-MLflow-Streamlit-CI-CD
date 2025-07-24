@@ -1,9 +1,7 @@
-# main.py
-
 from data_loader import load_data
 from data_preprocessing import preprocess_data
 from model_training import train_and_save_models
-from model_evaluation import evaluate_and_register_models
+from model_evaluation import evaluate_models_without_mlflow  # updated
 
 def main():
     print("📥 Loading dataset...")
@@ -16,9 +14,9 @@ def main():
     train_and_save_models(X_train, y_train, model_dir="models")
     print("🎯 Model training completed and saved.")
 
-    print("📊 Evaluating and registering models...")
-    evaluate_and_register_models(X_test, y_test, model_dir="models")
-    print("📈 Evaluation completed. Best model registered to Production.")
+    print("📊 Evaluating models locally...")
+    evaluate_models_without_mlflow(X_test, y_test, model_dir="models")
+    print("📈 Evaluation completed and best model selected.")
 
 if __name__ == "__main__":
     main()

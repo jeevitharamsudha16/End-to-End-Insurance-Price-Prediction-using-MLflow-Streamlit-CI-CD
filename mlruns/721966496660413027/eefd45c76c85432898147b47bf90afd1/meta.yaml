@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/jeevithads/Desktop/Insurance_price_prediction/mlruns/721966496660413027/eefd45c76c85432898147b47bf90afd1/artifacts
+end_time: 1753345626700
+entry_point_name: ''
+experiment_id: '721966496660413027'
+lifecycle_stage: active
+run_id: eefd45c76c85432898147b47bf90afd1
+run_name: worried-gnat-159
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753345622658
+status: 3
+tags: []
+user_id: jeevithads

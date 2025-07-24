@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/jeevithads/Desktop/Insurance_price_prediction/mlruns/721966496660413027/5693ef7bea474cc18ffffc3afbcc72ec/artifacts
+end_time: 1753345362653
+entry_point_name: ''
+experiment_id: '721966496660413027'
+lifecycle_stage: active
+run_id: 5693ef7bea474cc18ffffc3afbcc72ec
+run_name: svm_training
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753345358599
+status: 3
+tags: []
+user_id: jeevithads

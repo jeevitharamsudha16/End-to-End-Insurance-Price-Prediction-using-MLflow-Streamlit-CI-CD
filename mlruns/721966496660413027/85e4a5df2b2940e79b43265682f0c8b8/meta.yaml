@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/jeevithads/Desktop/Insurance_price_prediction/mlruns/721966496660413027/85e4a5df2b2940e79b43265682f0c8b8/artifacts
+end_time: 1753345626700
+entry_point_name: ''
+experiment_id: '721966496660413027'
+lifecycle_stage: active
+run_id: 85e4a5df2b2940e79b43265682f0c8b8
+run_name: dapper-bird-128
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753345622658
+status: 3
+tags: []
+user_id: jeevithads

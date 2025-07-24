@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/jeevithads/Desktop/Insurance_price_prediction/mlruns/593863671662595675/b7fdd061fb0c4623bbe9ace596862f64/artifacts
+end_time: 1753345640149
+entry_point_name: ''
+experiment_id: '593863671662595675'
+lifecycle_stage: active
+run_id: b7fdd061fb0c4623bbe9ace596862f64
+run_name: gradient_boosting_evaluation
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753345638097
+status: 3
+tags: []
+user_id: jeevithads

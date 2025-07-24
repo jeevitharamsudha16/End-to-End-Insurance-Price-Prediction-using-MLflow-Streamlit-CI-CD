@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/jeevithads/Desktop/Insurance_price_prediction/mlruns/721966496660413027/7300e5baa1c84af194f28ab70ae5dff1/artifacts
+end_time: 1753345350457
+entry_point_name: ''
+experiment_id: '721966496660413027'
+lifecycle_stage: active
+run_id: 7300e5baa1c84af194f28ab70ae5dff1
+run_name: random_forest_training
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753345345851
+status: 3
+tags: []
+user_id: jeevithads

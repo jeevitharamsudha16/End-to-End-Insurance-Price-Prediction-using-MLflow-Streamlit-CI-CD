@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/jeevithads/Desktop/Insurance_price_prediction/mlruns/721966496660413027/b9022f0d788f48b0a18b803da2ad5cbf/artifacts
+end_time: 1753345354567
+entry_point_name: ''
+experiment_id: '721966496660413027'
+lifecycle_stage: active
+run_id: b9022f0d788f48b0a18b803da2ad5cbf
+run_name: delightful-flea-322
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753345350458
+status: 3
+tags: []
+user_id: jeevithads

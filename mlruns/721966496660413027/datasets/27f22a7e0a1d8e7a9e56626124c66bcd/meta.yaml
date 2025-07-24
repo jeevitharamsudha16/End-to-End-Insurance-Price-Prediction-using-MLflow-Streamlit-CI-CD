@@ -1,0 +1,11 @@
+digest: bf779fd2
+name: dataset
+profile: '{"num_rows": 1069, "num_elements": 6414}'
+schema: '{"mlflow_colspec": [{"type": "double", "name": "age", "required": true},
+  {"type": "double", "name": "bmi", "required": true}, {"type": "long", "name": "children",
+  "required": true}, {"type": "long", "name": "smoker", "required": true}, {"type":
+  "long", "name": "region", "required": true}, {"type": "long", "name": "sex_male",
+  "required": true}]}'
+source: '{"tags": {"mlflow.user": "jeevithads", "mlflow.source.name": "main.py", "mlflow.source.type":
+  "LOCAL", "mlflow.source.git.commit": "be1d5e21fa1defde9c31b13ac5adb697c4deebf8"}}'
+source_type: code

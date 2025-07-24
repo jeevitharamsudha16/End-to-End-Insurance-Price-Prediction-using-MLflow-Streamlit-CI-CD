@@ -1,0 +1,32 @@
+artifact_path: file:///Users/jeevithads/Desktop/Insurance_price_prediction/mlruns/721966496660413027/models/m-6bfa3771ca1d434683375a6549287a0c/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.11.5
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.1
+is_signature_from_type_hint: false
+mlflow_version: 3.1.4
+model_id: m-6bfa3771ca1d434683375a6549287a0c
+model_size_bytes: 70969
+model_uuid: m-6bfa3771ca1d434683375a6549287a0c
+prompts: null
+run_id: dbf35881f45742fc8cdd3391a44ba248
+signature:
+  inputs: '[{"type": "double", "name": "age", "required": true}, {"type": "double",
+    "name": "bmi", "required": true}, {"type": "long", "name": "children", "required":
+    true}, {"type": "long", "name": "smoker", "required": true}, {"type": "long",
+    "name": "region", "required": true}, {"type": "long", "name": "sex_male", "required":
+    true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-07-24 08:26:53.163438'

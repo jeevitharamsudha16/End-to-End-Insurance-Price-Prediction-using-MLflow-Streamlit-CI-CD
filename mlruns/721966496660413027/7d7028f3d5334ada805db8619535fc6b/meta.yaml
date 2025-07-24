@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/jeevithads/Desktop/Insurance_price_prediction/mlruns/721966496660413027/7d7028f3d5334ada805db8619535fc6b/artifacts
+end_time: 1753345622616
+entry_point_name: ''
+experiment_id: '721966496660413027'
+lifecycle_stage: active
+run_id: 7d7028f3d5334ada805db8619535fc6b
+run_name: nebulous-perch-34
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753345618773
+status: 3
+tags: []
+user_id: jeevithads

@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/jeevithads/Desktop/Insurance_price_prediction/mlruns/721966496660413027/2b66f2b6efba4b4795307dbff6496162/artifacts
+end_time: 1753345602097
+entry_point_name: ''
+experiment_id: '721966496660413027'
+lifecycle_stage: active
+run_id: 2b66f2b6efba4b4795307dbff6496162
+run_name: youthful-cub-657
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753345596359
+status: 3
+tags: []
+user_id: jeevithads

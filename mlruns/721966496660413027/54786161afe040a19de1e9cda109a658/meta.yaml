@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/jeevithads/Desktop/Insurance_price_prediction/mlruns/721966496660413027/54786161afe040a19de1e9cda109a658/artifacts
+end_time: 1753345622657
+entry_point_name: ''
+experiment_id: '721966496660413027'
+lifecycle_stage: active
+run_id: 54786161afe040a19de1e9cda109a658
+run_name: knn_training
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753345618773
+status: 3
+tags: []
+user_id: jeevithads

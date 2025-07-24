@@ -1,0 +1,10 @@
+artifact_location: file:///Users/jeevithads/Desktop/Insurance_price_prediction/mlruns/721966496660413027/models/m-c54ed6cd6a5c4c62ae3ed46b44857337/artifacts
+creation_timestamp: 1753345605035
+experiment_id: '721966496660413027'
+last_updated_timestamp: 1753345606773
+model_id: m-c54ed6cd6a5c4c62ae3ed46b44857337
+model_type: null
+name: best_estimator
+source_run_id: 70e4c4a8de5840adaf43606373ade09b
+status: 2
+status_message: null
